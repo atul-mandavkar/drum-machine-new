@@ -1,0 +1,6 @@
+.displayBox{
+  width: 50%;
+  height: 100%;
+  background-color: burlywood;
+  border-left: 1px solid black;
+}

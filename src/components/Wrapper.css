@@ -1,0 +1,13 @@
+.wrapper{
+  width: 700px;
+  height: 600px ;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-device-width: 600px) {
+  .wrapper{
+    width: 100vw;
+    height: 70vh;
+  }
+}
