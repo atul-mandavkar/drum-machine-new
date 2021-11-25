@@ -1,0 +1,10 @@
+.drumBox{
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  /* To display Buttons properly used grid method */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
