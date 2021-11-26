@@ -3,6 +3,8 @@ import DrumBox from "./components/DrumBox";
 import DisplayBox from "./components/DisplayBox";
 import Buttons from "./components/Buttons";
 import PowerSwitch from "./components/PowerSwitch";
+import Screen from "./components/Screen";
+import Volumn from "./components/Volumn";
 
 const buttonsValue = [
   ["Q", "W", "E"],
@@ -25,6 +27,11 @@ const urlValue = [
     "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
     "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
   ]
+];
+const nameValue = [
+  ["Heater-1", "Heater-2", "Heater-3"],
+  ["Heater-4_1", "Heater-6", "Dsc_oh"],
+  ["Kick_n_Hat", "RP4_Kick_1", "Cev_H2"]
 ];
 
 function App() {
@@ -101,15 +108,15 @@ function App() {
                 urlValue[2][3]
               }
               value2={
-                btn === "Q" ? "Heater-1" :
-                btn === "W" ? "Heater-2" :
-                btn === "E" ? "Heater-3" :
-                btn === "A" ? "Heater-4_1" :
-                btn === "S" ? "Heater-6" :
-                btn === "D" ? "Dsc_oh" :
-                btn === "Z" ? "Kick_n_Hat" :
-                btn === "X" ? "RP4_Kick_1" :
-                "Cev_H2"
+                btn === "Q" ? nameValue[0][1] :
+                btn === "W" ? nameValue[0][2] :
+                btn === "E" ? nameValue[0][3] :
+                btn === "A" ? nameValue[1][1] :
+                btn === "S" ? nameValue[1][2] :
+                btn === "D" ? nameValue[1][3] :
+                btn === "Z" ? nameValue[2][1] :
+                btn === "X" ? nameValue[2][2] :
+                nameValue[2][3]
               }
             />
           );
@@ -117,6 +124,8 @@ function App() {
       </DrumBox>
       <DisplayBox>
         <PowerSwitch/>
+        <Screen value3="" />
+        <Volumn/>
       </DisplayBox>
     </Wrapper>
   );

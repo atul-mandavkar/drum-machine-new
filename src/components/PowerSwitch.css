@@ -3,6 +3,7 @@
   height: 100px;
   text-align: center;
   font-size: larger;
+  flex: 1;
 }
 .switch{
   position: relative;
@@ -43,11 +44,11 @@
   transition: 0.4s;
 }
 input:checked + .slider{
-  background-color: blue;
+  background-color: navy;
 }
 input:checked + .slider::before{
   transform: translateX(50px);
-  color: blue;
+  color: navy;
 }
 .slider.round{
   border-radius: 30%;
