@@ -1,11 +1,11 @@
-//import React, {useState} from "react";
+import React/*, {useState}*/ from "react";
 import Wrapper from "./components/Wrapper";
 import DrumBox from "./components/DrumBox";
 import DisplayBox from "./components/DisplayBox";
 import Buttons from "./components/Buttons";
 import PowerSwitch from "./components/PowerSwitch";
 import Screen from "./components/Screen";
-import Volumn1 from "./components/Volumn1";
+import SoundButton from "./components/SoundButton";
 
 const buttonsValue = [
   ["Q", "W", "E"],
@@ -35,7 +35,7 @@ const nameValue = [
   ["Kick_n_Hat", "RP4_Kick_1", "Cev_H2"]
 ];
 
-function App() {
+const App = () => {
   
   
   const playQ = () => {};
@@ -51,84 +51,84 @@ function App() {
   return (
     <Wrapper>
       <DrumBox>
-        {buttonsValue.flat().map((btn, i)=>{
-          return (
-            <Buttons
-              key={i}
-              eleId={
-                btn === "Q" ? "d1" :
-                btn === "W" ? "d2" :
-                btn === "E" ? "d3" :
-                btn === "A" ? "d4" :
-                btn === "S" ? "d5" :
-                btn === "D" ? "d6" :
-                btn === "Z" ? "d7" :
-                btn === "X" ? "d8" :
-                "d9"
-              }
-              onClick={
-                btn === "Q" ? playQ() :
-                btn === "W" ? playW() :
-                btn === "E" ? playE() :
-                btn === "A" ? playA() :
-                btn === "S" ? playS() :
-                btn === "D" ? playD() :
-                btn === "Z" ? playZ() :
-                btn === "X" ? playX() :
-                playC()
-              }
-              value={
-                btn === "Q" ? "Q" :
-                btn === "W" ? "W" :
-                btn === "E" ? "E" :
-                btn === "A" ? "A" :
-                btn === "S" ? "S" :
-                btn === "D" ? "D" :
-                btn === "Z" ? "Z" :
-                btn === "X" ? "X" :
-                "C"
-              }
-              audId={
-                btn === "Q" ? "Q" :
-                btn === "W" ? "W" :
-                btn === "E" ? "E" :
-                btn === "A" ? "A" :
-                btn === "S" ? "S" :
-                btn === "D" ? "D" :
-                btn === "Z" ? "Z" :
-                btn === "X" ? "X" :
-                "C"
-              }
-              url={
-                btn === "Q" ? urlValue[0][1] :
-                btn === "W" ? urlValue[0][2] :
-                btn === "E" ? urlValue[0][3] :
-                btn === "A" ? urlValue[1][1] :
-                btn === "S" ? urlValue[1][2] :
-                btn === "D" ? urlValue[1][3] :
-                btn === "Z" ? urlValue[2][1] :
-                btn === "X" ? urlValue[2][2] :
-                urlValue[2][3]
-              }
-              value2={
-                btn === "Q" ? nameValue[0][1] :
-                btn === "W" ? nameValue[0][2] :
-                btn === "E" ? nameValue[0][3] :
-                btn === "A" ? nameValue[1][1] :
-                btn === "S" ? nameValue[1][2] :
-                btn === "D" ? nameValue[1][3] :
-                btn === "Z" ? nameValue[2][1] :
-                btn === "X" ? nameValue[2][2] :
-                nameValue[2][3]
-              }
-            />
-          );
-        })}
+      {buttonsValue.flat().map((btn, i)=>{
+        return (
+          <Buttons
+            key={i}
+            eleId={
+              btn === "Q" ? "d1" :
+              btn === "W" ? "d2" :
+              btn === "E" ? "d3" :
+              btn === "A" ? "d4" :
+              btn === "S" ? "d5" :
+              btn === "D" ? "d6" :
+              btn === "Z" ? "d7" :
+              btn === "X" ? "d8" :
+              "d9"
+            }
+            onClick={
+              btn === "Q" ? playQ() :
+              btn === "W" ? playW() :
+              btn === "E" ? playE() :
+              btn === "A" ? playA() :
+              btn === "S" ? playS() :
+              btn === "D" ? playD() :
+              btn === "Z" ? playZ() :
+              btn === "X" ? playX() :
+              playC()
+            }
+            value={
+              btn === "Q" ? "Q" :
+              btn === "W" ? "W" :
+              btn === "E" ? "E" :
+              btn === "A" ? "A" :
+              btn === "S" ? "S" :
+              btn === "D" ? "D" :
+              btn === "Z" ? "Z" :
+              btn === "X" ? "X" :
+              "C"
+            }
+            audId={
+              btn === "Q" ? "Q" :
+              btn === "W" ? "W" :
+              btn === "E" ? "E" :
+              btn === "A" ? "A" :
+              btn === "S" ? "S" :
+              btn === "D" ? "D" :
+              btn === "Z" ? "Z" :
+              btn === "X" ? "X" :
+              "C"
+            }
+            url={
+              btn === "Q" ? urlValue[0][1] :
+              btn === "W" ? urlValue[0][2] :
+              btn === "E" ? urlValue[0][3] :
+              btn === "A" ? urlValue[1][1] :
+              btn === "S" ? urlValue[1][2] :
+              btn === "D" ? urlValue[1][3] :
+              btn === "Z" ? urlValue[2][1] :
+              btn === "X" ? urlValue[2][2] :
+              urlValue[2][3]
+            }
+            value2={
+              btn === "Q" ? nameValue[0][1] :
+              btn === "W" ? nameValue[0][2] :
+              btn === "E" ? nameValue[0][3] :
+              btn === "A" ? nameValue[1][1] :
+              btn === "S" ? nameValue[1][2] :
+              btn === "D" ? nameValue[1][3] :
+              btn === "Z" ? nameValue[2][1] :
+              btn === "X" ? nameValue[2][2] :
+              nameValue[2][3]
+            }
+          />
+        );
+      })}
       </DrumBox>
       <DisplayBox>
         <PowerSwitch />
         <Screen value3="" />
-        <Volumn1 />
+        <SoundButton />
       </DisplayBox>
     </Wrapper>
   );

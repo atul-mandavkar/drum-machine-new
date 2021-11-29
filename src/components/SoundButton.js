@@ -1,9 +1,9 @@
-import "./Volumn1.css";
+import "./SoundButton.css";
 
 
 
 
-const Volumn1 = () => {
+const SoundButton = () => {
   return (
     <div className="container3">
       <h3>Volumn</h3>
@@ -16,4 +16,4 @@ const Volumn1 = () => {
 
 
 
-export default Volumn1;
+export default SoundButton;
