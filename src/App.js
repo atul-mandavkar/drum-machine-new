@@ -1,10 +1,11 @@
+//import React, {useState} from "react";
 import Wrapper from "./components/Wrapper";
 import DrumBox from "./components/DrumBox";
 import DisplayBox from "./components/DisplayBox";
 import Buttons from "./components/Buttons";
 import PowerSwitch from "./components/PowerSwitch";
 import Screen from "./components/Screen";
-import Volumn from "./components/Volumn";
+import Volumn1 from "./components/Volumn1";
 
 const buttonsValue = [
   ["Q", "W", "E"],
@@ -35,6 +36,8 @@ const nameValue = [
 ];
 
 function App() {
+  
+  
   const playQ = () => {};
   const playW = () => {};
   const playE = () => {};
@@ -123,9 +126,9 @@ function App() {
         })}
       </DrumBox>
       <DisplayBox>
-        <PowerSwitch/>
+        <PowerSwitch />
         <Screen value3="" />
-        <Volumn/>
+        <Volumn1 />
       </DisplayBox>
     </Wrapper>
   );
